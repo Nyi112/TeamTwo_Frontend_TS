@@ -1,0 +1,172 @@
+/** @format */
+
+.bod-dashboard {
+  padding: 1.5rem;
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.dashboard-header h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.period-buttons button {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  margin-left: 0.5rem;
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+.period-buttons button.active {
+  background-color: #2563eb;
+  color: white;
+}
+
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .kpi-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .kpi-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.charts-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.charts-grid.second-row {
+  grid-template-columns: 1fr;
+}
+
+.chart-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.chart-card h2 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.revenue-category {
+  grid-column: span 1;
+}
+
+@media (min-width: 1024px) {
+  .charts-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .charts-grid.second-row {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+.shop-stats .stat-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.shop-stats .occupied {
+  color: green;
+}
+
+.shop-stats .vacant {
+  color: red;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 0.5rem;
+  background-color: #e0e0e0;
+  border-radius: 0.25rem;
+  overflow: hidden;
+  margin-top: 0.25rem;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: green;
+  border-radius: 0.25rem;
+}
+
+.progress-text {
+  text-align: center;
+  font-size: 0.875rem;
+  color: #555;
+  margin-top: 0.25rem;
+}
+
+.quick-stats {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.stat-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card .value {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+.stat-card .value.green {
+  color: green;
+}
+
+.stat-card .value.purple {
+  color: purple;
+}
+
+.stat-card .subtitle {
+  font-size: 0.875rem;
+  color: #555;
+}
+
+@media (min-width: 768px) {
+  .quick-stats {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 16rem;
+}
